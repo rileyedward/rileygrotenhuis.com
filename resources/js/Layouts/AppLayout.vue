@@ -1,10 +1,13 @@
+<script setup>
+import Navbar from '@/Layouts/Partials/Navbar.vue';
+</script>
+
 <template>
-    <div>
-        <nav>
-            <h1>Riley Grotenhuis</h1>
-        </nav>
-        <main>
-            <slot />
-        </main>
-    </div>
+  <div>
+    <Navbar />
+
+    <main>
+      <slot />
+    </main>
+  </div>
 </template>
