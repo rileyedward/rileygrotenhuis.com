@@ -1,5 +1,5 @@
 <template>
     <div>
-        <h1>Riley Grotenhuis</h1>
+        <h1 class="font-bold text-2xl">Riley Grotenhuis</h1>
     </div>
 </template>
