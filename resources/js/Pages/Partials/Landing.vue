@@ -18,7 +18,7 @@
       <a
         href="#"
         target="_blank"
-        class="py-2 px-4 border border-gray-400 rounded-full bg-white transition duration-500 ease-in-out transform hover:bg-transparent hover:border-gray-500 hover:scale-105 text-base text-gray-800 hover:text-white"
+        class="py-2 px-4 border border-gray-400 rounded-full bg-white transition duration-500 ease-in-out transform hover:bg-transparent hover:border-gray-500 hover:scale-105 text-base text-gray-800 hover:text-white font-semibold"
       >
         read my blog
       </a>
