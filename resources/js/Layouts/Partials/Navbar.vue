@@ -25,10 +25,10 @@ const openContactModal = () => {
     <!-- Contact Button -->
     <div>
       <button
-        class="py-2 px-4 border border-gray-400 rounded-full transition duration-500 ease-in-out transform hover:bg-gray-400 hover:scale-105"
+        class="text-lg py-2 px-4 border border-gray-400 rounded-full bg-transparent transition duration-500 ease-in-out transform hover:bg-white hover:border-gray-500 hover:scale-105 text-white hover:text-gray-800"
         @click.prevent="openContactModal"
       >
-        <span class="text-base text-white hover:text-gray-100"> contact </span>
+        contact
       </button>
     </div>
   </nav>

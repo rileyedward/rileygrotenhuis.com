@@ -1,0 +1,28 @@
+<template>
+  <div class="max-w-5xl mx-auto py-16 px-8 flex justify-between items-center">
+    <!-- Hero Bio -->
+    <div class="max-w-[600px]">
+      <div class="text-base font-bold text-gray-400 mb-4">
+        Software Engineer based in Kansas City
+      </div>
+
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold mb-2">Hi, I'm Riley!</h1>
+        <p class="text-3xl font-bold">
+          I've been building high performing web applications for 4 years.
+        </p>
+      </div>
+
+      <a
+        href="#"
+        target="_blank"
+        class="py-2 px-4 border border-gray-400 rounded-full bg-white transition duration-500 ease-in-out transform hover:bg-transparent hover:border-gray-500 hover:scale-105 text-base text-gray-800 hover:text-white"
+      >
+        read my blog
+      </a>
+    </div>
+
+    <!-- Hero Image -->
+    <div class="w-[350px] h-[350px] bg-gray-200 rounded-full" />
+  </div>
+</template>
