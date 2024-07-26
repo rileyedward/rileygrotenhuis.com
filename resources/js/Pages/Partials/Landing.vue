@@ -1,7 +1,9 @@
 <template>
-  <div class="max-w-5xl mx-auto py-16 px-8 flex justify-between items-center">
+  <div
+    class="max-w-5xl mx-auto py-8 md:py-24 px-8 flex flex-col-reverse md:flex-row gap-8 md:gap-0 justify-between items-center"
+  >
     <!-- Hero Bio -->
-    <div class="max-w-[600px]">
+    <div class="max-w-[550px]">
       <div class="text-base font-bold text-gray-400 mb-4">
         Software Engineer based in Kansas City
       </div>
@@ -23,6 +25,6 @@
     </div>
 
     <!-- Hero Image -->
-    <div class="w-[350px] h-[350px] bg-gray-200 rounded-full" />
+    <div class="w-[300px] h-[300px] bg-gray-200 rounded-full" />
   </div>
 </template>
