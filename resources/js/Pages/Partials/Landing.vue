@@ -1,6 +1,6 @@
 <template>
   <div
-    class="max-w-5xl mx-auto py-8 md:py-24 px-8 flex flex-col-reverse md:flex-row gap-8 md:gap-0 justify-between items-center"
+    class="max-w-6xl mx-auto py-8 md:py-24 px-8 flex flex-col-reverse md:flex-row gap-8 md:gap-0 justify-between items-center"
   >
     <!-- Hero Bio -->
     <div class="max-w-[550px]">
