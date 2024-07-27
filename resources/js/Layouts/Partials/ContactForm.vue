@@ -2,7 +2,7 @@
 import { useForm } from '@inertiajs/vue3';
 import { computed } from 'vue';
 
-const emits = defineEmits(['closeModal']);
+const emits = defineEmits(['success', 'closeModal']);
 
 const form = useForm({
   first_name: '',
@@ -32,8 +32,8 @@ const submitForm = () => {
     preserveScroll: true,
     preserveState: true,
     onSuccess: () => {
-      emits('closeModal');
       form.reset();
+      emits('success');
     },
   });
 };

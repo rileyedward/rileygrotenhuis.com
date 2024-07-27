@@ -2,8 +2,10 @@
 import { ref } from 'vue';
 import Modal from '@/Components/Breeze/Modal.vue';
 import ContactForm from '@/Layouts/Partials/ContactForm.vue';
+import ContactSuccess from '@/Layouts/Partials/ContactSuccess.vue';
 
 const contactModal = ref(false);
+const success = ref(false);
 </script>
 
 <template>
@@ -25,6 +27,11 @@ const contactModal = ref(false);
   </nav>
 
   <Modal :show="contactModal" @close="contactModal = false">
-    <ContactForm @closeModal="contactModal = false" />
+    <ContactForm
+      v-if="!Boolean(success)"
+      @success="success = true"
+      @closeModal="contactModal = false"
+    />
+    <ContactSuccess v-else @goback="success = false" />
   </Modal>
 </template>
