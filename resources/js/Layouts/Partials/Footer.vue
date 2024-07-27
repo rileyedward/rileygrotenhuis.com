@@ -5,7 +5,7 @@ import LinkedInIcon from '@/Components/Icons/LinkedInIcon.vue';
 
 <template>
   <footer
-    class="max-w-7xl mx-auto px-8 py-24 flex justify-between items-center"
+    class="max-w-7xl mx-auto px-8 py-24 flex flex-col md:flex-row gap-4 text-center md:text-left justify-between items-center"
   >
     <div>
       <h3 class="text-xl font-semibold">Riley Grotenhuis.</h3>
