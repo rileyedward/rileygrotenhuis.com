@@ -3,6 +3,8 @@ import { useForm } from '@inertiajs/vue3';
 import InputError from '@/Components/Breeze/InputError.vue';
 import { computed } from 'vue';
 
+const emits = defineEmits(['closeModal']);
+
 const form = useForm({
   first_name: '',
   last_name: '',
@@ -23,7 +25,14 @@ const formIsValid = computed(() => {
 });
 
 const submitForm = () => {
-  alert('Todo...');
+  form.post('/contact', {
+    preserveScroll: true,
+    preserveState: true,
+    onSuccess: () => {
+      emits('closeModal');
+      form.reset();
+    },
+  });
 };
 </script>
 
@@ -37,7 +46,7 @@ const submitForm = () => {
       I’ll get back to you as soon as possible.
     </p>
 
-    <form class="w-full space-y-6">
+    <form class="w-full space-y-6" @submit.prevent="submitForm">
       <div class="w-full flex items-center gap-4">
         <!-- First Name -->
         <div class="w-full">
@@ -124,6 +133,7 @@ const submitForm = () => {
       <div class="flex justify-end">
         <button
           class="py-2 px-4 border border-gray-400 rounded-full transition duration-500 ease-in-out transform hover:scale-105 text-base font-semibold"
+          type="submit"
           :class="{
             'bg-white hover:bg-transparent hover:border-gray-500 text-gray-800 hover:text-white':
               Boolean(formIsValid),

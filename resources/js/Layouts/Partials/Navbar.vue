@@ -25,6 +25,6 @@ const contactModal = ref(false);
   </nav>
 
   <Modal :show="contactModal" @close="contactModal = false">
-    <ContactForm />
+    <ContactForm @closeModal="contactModal = false" />
   </Modal>
 </template>
