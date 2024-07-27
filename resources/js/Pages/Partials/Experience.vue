@@ -1,7 +1,7 @@
 <script setup>
 const experiences = [
   {
-    color: 'primary-600',
+    color: 'blue-500',
     timeline: 'Nov 2021 - Aug 2024',
     position: 'Software Engineer',
     company: 'Midwestern Interactive',

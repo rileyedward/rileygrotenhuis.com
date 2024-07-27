@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="hover:bg-neutral-600 rounded-full">
     <svg
       version="1.1"
       id="Layer_1"
@@ -41,3 +41,4 @@
     </svg>
   </div>
 </template>
+<script setup lang="ts"></script>

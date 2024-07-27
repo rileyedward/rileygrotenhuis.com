@@ -1,5 +1,6 @@
 <script setup>
 import Navbar from '@/Layouts/Partials/Navbar.vue';
+import Footer from '@/Layouts/Partials/Footer.vue';
 </script>
 
 <template>
@@ -8,6 +9,8 @@ import Navbar from '@/Layouts/Partials/Navbar.vue';
 
     <main>
       <slot />
+
+      <Footer />
     </main>
   </div>
 </template>

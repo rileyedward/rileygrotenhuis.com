@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="hover:bg-neutral-600 rounded-full">
     <svg
       fill="#ffffff"
       width="36px"

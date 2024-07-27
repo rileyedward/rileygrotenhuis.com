@@ -1,3 +1,8 @@
+<script setup>
+import GitHubIcon from '@/Components/Icons/GitHubIcon.vue';
+import LinkedInIcon from '@/Components/Icons/LinkedInIcon.vue';
+</script>
+
 <template>
   <div
     class="max-w-6xl mx-auto py-8 md:py-24 px-8 flex flex-col-reverse md:flex-row gap-8 md:gap-0 justify-between items-center"
@@ -29,7 +34,7 @@
         </a>
 
         <a href="https://linkedin.com/in/rileygrotenhuis" target="_blank">
-          <LInkedInIcon />
+          <LinkedInIcon />
         </a>
       </div>
     </div>
@@ -44,7 +49,3 @@
     </div>
   </div>
 </template>
-<script setup lang="ts">
-import LInkedInIcon from '@/Components/Icons/LInkedInIcon.vue';
-import GitHubIcon from '@/Components/Icons/GitHubIcon.vue';
-</script>
