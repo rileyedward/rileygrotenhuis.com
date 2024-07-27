@@ -9,7 +9,7 @@ const experiences = [
       'Php, Laravel, JavaScript, TypeScript, Vue, Next.js, React, Docker, Digital Ocean, and more.',
     details: [
       'Designed and implemented a comprehensive alarm outage map for a major client, significantly enhancing service reliability across cable, internet, and telephone services in various cities.',
-      'Engineered software solutions for an alternative school lunch program, efficiently handling thousands of real time transactions daily across numerous schools on the East Coast',
+      'Engineered software solutions for an alternative school lunch program, efficiently handling thousands of real time transactions daily across numerous schools on the East Coast.',
       'Led a development team, conducting regular meetings to support professional growth and skill enhancement, which boosted team performance and improved project outcomes.',
     ],
   },
