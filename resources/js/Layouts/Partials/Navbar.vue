@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from 'vue';
 import Modal from '@/Components/Breeze/Modal.vue';
-import ContactForm from '@/Layouts/Partials/ContactForm.vue';
-import ContactSuccess from '@/Layouts/Partials/ContactSuccess.vue';
+import ContactForm from '@/Components/Contact/ContactForm.vue';
+import ContactSuccess from '@/Components/Contact/ContactSuccess.vue';
 
 const contactModal = ref(false);
 const success = ref(false);
@@ -26,6 +26,7 @@ const success = ref(false);
     </div>
   </nav>
 
+  <!-- Contact Modal -->
   <Modal :show="contactModal" @close="contactModal = false">
     <ContactForm
       v-if="!Boolean(success)"

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="w-fit p-4 rounded-full hover:bg-neutral-900">
     <svg
       width="200"
       height="50"

@@ -1,5 +1,5 @@
 <script setup>
-import MwiLogo from '@/Components/Icons/MwiLogo.vue';
+import MidwesternIcon from '@/Components/Icons/MidwesternIcon.vue';
 </script>
 
 <template>
@@ -8,7 +8,7 @@ import MwiLogo from '@/Components/Icons/MwiLogo.vue';
       <!-- Sender Info -->
       <div class="mb-4">
         <a href="https://www.buildmidwestern.com" target="_blank">
-          <MwiLogo />
+          <MidwesternIcon />
         </a>
       </div>
 
