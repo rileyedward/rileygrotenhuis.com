@@ -6,9 +6,9 @@ const experiences = [
     position: 'Software Engineer',
     company: 'Midwestern Interactive',
     technology:
-      'Php, Laravel, JavaScript, TypeScript, Vue, Next.js, React, Docker, Digital Ocean, and more.',
+      'Php, Laravel, JavaScript, TypeScript, Vue, Next.js, Docker, Digital Ocean, and more.',
     details: [
-      'Designed and implemented a comprehensive alarm outage map for a major client, significantly enhancing service reliability across cable, internet, and telephone services in various cities.',
+      'Designed and developed software for an analytics marketing platform, creating efficient ETL pipelines to integrate data from various sources and enabling seamless data analysis.',
       'Engineered software solutions for an alternative school lunch program, efficiently handling thousands of real time transactions daily across numerous schools on the East Coast.',
       'Led a development team, conducting regular meetings to support professional growth and skill enhancement, which boosted team performance and improved project outcomes.',
     ],
@@ -18,7 +18,7 @@ const experiences = [
     timeline: 'Jan 2020 - Nov 2021',
     position: 'Web Developer',
     company: 'Missouri State University',
-    technology: 'C#, JavaScript, Python, Asp.NET, React, and more.',
+    technology: 'C#, JavaScript, Python, Asp.NET, and React',
     details: [
       'Collaborated with developers, designers, and content strategists to deliver digital solutions for the\n' +
         'university s extensive community of students, faculty, and staff.',
