@@ -25,9 +25,9 @@
     </div>
 
     <!-- Hero Image -->
-    <div class="w-full flex justify-center">
+    <div class="w-full flex justify-center items-center">
       <img
-        src="/images/Profile.png"
+        src="/images/Profile.jpg"
         alt="Profile"
         class="w-[325px] h-[325px] bg-gray-200 rounded-full"
       />
