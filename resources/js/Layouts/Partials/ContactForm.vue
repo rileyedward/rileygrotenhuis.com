@@ -1,6 +1,5 @@
 <script setup>
 import { useForm } from '@inertiajs/vue3';
-import InputError from '@/Components/Breeze/InputError.vue';
 import { computed } from 'vue';
 
 const emits = defineEmits(['closeModal']);
@@ -11,6 +10,10 @@ const form = useForm({
   email: '',
   subject: '',
   message: '',
+});
+
+const formErrors = computed(() => {
+  return Object.values(form.errors);
 });
 
 const formIsValid = computed(() => {
@@ -62,7 +65,6 @@ const submitForm = () => {
             id="first_name"
             class="mt-1 block w-full px-3 py-2 bg-neutral-800 text-gray-300 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           />
-          <InputError :message="form.errors.first_name" />
         </div>
 
         <!-- Last Name -->
@@ -79,7 +81,6 @@ const submitForm = () => {
             id="last_name"
             class="mt-1 block w-full px-3 py-2 bg-neutral-800 text-gray-300 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           />
-          <InputError :message="form.errors.last_name" />
         </div>
       </div>
 
@@ -95,7 +96,6 @@ const submitForm = () => {
             id="email"
             class="mt-1 block w-full px-3 py-2 bg-neutral-800 text-gray-300 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           />
-          <InputError :message="form.errors.email" />
         </div>
 
         <!-- Subject -->
@@ -109,7 +109,6 @@ const submitForm = () => {
             id="subject"
             class="mt-1 block w-full px-3 py-2 bg-neutral-800 text-gray-300 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           />
-          <InputError :message="form.errors.subject" />
         </div>
       </div>
 
@@ -125,8 +124,12 @@ const submitForm = () => {
             rows="4"
             class="mt-1 block w-full px-3 py-2 bg-neutral-800 text-gray-300 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           />
-          <InputError :message="form.errors.message" />
         </div>
+      </div>
+
+      <!-- Errors -->
+      <div v-if="formErrors.length > 0" class="my-2 text-red-500 text-sm">
+        <p v-for="(error, index) in formErrors" :key="index">- {{ error }}</p>
       </div>
 
       <!-- Submit Button -->
