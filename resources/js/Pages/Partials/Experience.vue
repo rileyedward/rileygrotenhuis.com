@@ -35,7 +35,7 @@ const experiences = [
   <div
     class="max-w-6xl mx-auto py-24 px-8 flex flex-col-reverse md:flex-row gap-8 md:gap-0 justify-between items-center"
   >
-    <div class="flex flex-col gap-32">
+    <div class="flex flex-col gap-36">
       <!-- Experience -->
       <div
         v-for="(experience, index) in experiences"

@@ -16,7 +16,7 @@
       </div>
 
       <a
-        href="#"
+        href="https://dev.to/rileygrotenhuis"
         target="_blank"
         class="py-2 px-4 border border-gray-400 rounded-full bg-white transition duration-500 ease-in-out transform hover:bg-transparent hover:border-gray-500 hover:scale-105 text-base text-gray-800 hover:text-white font-semibold"
       >
@@ -25,6 +25,13 @@
     </div>
 
     <!-- Hero Image -->
-    <div class="w-[300px] h-[300px] bg-gray-200 rounded-full" />
+    <div class="w-full flex justify-center">
+      <img
+        src="/images/Profile.png"
+        alt="Profile"
+        class="w-[325px] h-[325px] bg-gray-200 rounded-full"
+      />
+    </div>
   </div>
 </template>
+<script setup lang="ts"></script>
