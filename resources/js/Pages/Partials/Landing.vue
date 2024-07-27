@@ -15,13 +15,23 @@
         </p>
       </div>
 
-      <a
-        href="https://dev.to/rileygrotenhuis"
-        target="_blank"
-        class="py-2 px-4 border border-gray-400 rounded-full bg-white transition duration-500 ease-in-out transform hover:bg-transparent hover:border-gray-500 hover:scale-105 text-base text-gray-800 hover:text-white font-semibold"
-      >
-        read my blog
-      </a>
+      <div class="flex flex-row-reverse md:flex-row items-center gap-4">
+        <a
+          href="https://dev.to/rileygrotenhuis"
+          target="_blank"
+          class="py-2 px-4 border border-gray-400 rounded-full bg-white transition duration-500 ease-in-out transform hover:bg-transparent hover:border-gray-500 hover:scale-105 text-base text-gray-800 hover:text-white font-semibold"
+        >
+          read my blog
+        </a>
+
+        <a href="https://github.com/rileyedward" target="_blank">
+          <GitHubIcon />
+        </a>
+
+        <a href="https://linkedin.com/in/rileygrotenhuis" target="_blank">
+          <LInkedInIcon />
+        </a>
+      </div>
     </div>
 
     <!-- Hero Image -->
@@ -34,4 +44,7 @@
     </div>
   </div>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import LInkedInIcon from '@/Components/Icons/LInkedInIcon.vue';
+import GitHubIcon from '@/Components/Icons/GitHubIcon.vue';
+</script>
