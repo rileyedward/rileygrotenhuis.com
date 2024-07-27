@@ -130,19 +130,28 @@ const submitForm = () => {
       </div>
 
       <!-- Submit Button -->
-      <div class="flex justify-end">
+      <div class="flex justify-end gap-4">
         <button
-          class="py-2 px-4 border border-gray-400 rounded-full transition duration-500 ease-in-out transform hover:scale-105 text-base font-semibold"
+          class="ml-4 py-2 px-6 border border-gray-400 rounded-full transition duration-500 ease-in-out transform hover:scale-105 text-base font-semibold bg-black text-gray-300 hover:bg-transparent hover:border-gray-500 hover:text-white"
+          type="button"
+          @click.prevent="$emit('closeModal')"
+        >
+          Cancel
+        </button>
+
+        <button
+          class="py-2 px-6 border rounded-full transition duration-500 ease-in-out transform hover:scale-105 text-base font-semibold"
           type="submit"
           :class="{
-            'bg-white hover:bg-transparent hover:border-gray-500 text-gray-800 hover:text-white':
+            'bg-blue-500 border-blue-500 text-white hover:bg-transparent hover:text-blue-500':
               Boolean(formIsValid),
-            'bg-gray-500 text-gray-400': !Boolean(formIsValid),
+            'bg-gray-500 border-gray-500 text-gray-400 cursor-not-allowed':
+              !Boolean(formIsValid),
           }"
           :disabled="!formIsValid"
           @click.prevent="submitForm"
         >
-          Send message
+          Send Message
         </button>
       </div>
     </form>
