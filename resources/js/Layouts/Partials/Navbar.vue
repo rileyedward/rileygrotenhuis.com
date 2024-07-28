@@ -12,7 +12,7 @@ const success = ref(false);
   <nav class="max-w-7xl mx-auto py-12 px-8 flex justify-between items-center">
     <!-- Navigation Title -->
     <div>
-      <h1 class="text-xl font-bold cursor-pointer">Riley Grotenhuis.</h1>
+      <h1 class="text-lg font-bold cursor-pointer">Riley Edward Grotenhuis.</h1>
     </div>
 
     <!-- Contact Button -->
