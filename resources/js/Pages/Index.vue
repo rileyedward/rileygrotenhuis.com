@@ -3,6 +3,7 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 import Landing from '@/Pages/Partials/Landing.vue';
 import Experience from '@/Pages/Partials/Experience.vue';
 import Testimonial from '@/Pages/Partials/Testimonial.vue';
+import Projects from '@/Pages/Partials/Projects.vue';
 </script>
 
 <template>
@@ -10,5 +11,6 @@ import Testimonial from '@/Pages/Partials/Testimonial.vue';
     <Landing />
     <Experience />
     <Testimonial />
+    <Projects />
   </AppLayout>
 </template>
