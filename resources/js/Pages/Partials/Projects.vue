@@ -12,6 +12,7 @@ const projects = ref([
   {
     title: 'Corvesive',
     href: 'https://github.com/rileyedward/corvesive',
+    github: 'https://github.com/rileyedward/corvesive',
     slogan: 'Simplify your budgeting.',
     tech: 'PHP, Laravel, MySQL, JavaScript, Vue.js, TailwindCSS, Docker',
     description: [
@@ -23,7 +24,8 @@ const projects = ref([
   },
   {
     title: 'Applicy',
-    href: 'https://github.com/rileyedward/applicy',
+    href: 'https://applicy.rileyedward.com',
+    github: 'https://github.com/rileyedward/applicy',
     slogan: 'Streamline your job application journey.',
     tech: 'PHP, Laravel, MySQL, JavaScript, Vue.js, TailwindCSS, Docker, OpenAI, AI',
     description: [
@@ -36,6 +38,7 @@ const projects = ref([
   {
     title: 'rbranch',
     href: 'https://github.com/rileyedward/rbranch',
+    github: 'https://github.com/rileyedward/rbranch',
     slogan: 'CLI tool built to simplify git branches.',
     tech: 'Go, Bubbletea, Git',
     description: [
@@ -48,6 +51,7 @@ const projects = ref([
   {
     title: 'AirQueue',
     href: 'https://github.com/rileyedward/airqueue',
+    github: 'https://github.com/rileyedward/airqueue',
     slogan: 'Share music with your friends using Live Sessions!',
     tech: 'PHP, Laravel, MySQL, JavaScript, Vue.js, TailwindCSS, Docker',
     description: [
@@ -61,10 +65,6 @@ const projects = ref([
 
 const focusedProject = ref(0);
 
-const previousProject = () => {
-  focusedProject.value = focusedProject.value === 0 ? projects.value.length - 1 : focusedProject.value - 1;
-};
-
 const nextProject = () => {
   focusedProject.value = focusedProject.value === projects.value.length - 1 ? 0 : focusedProject.value + 1;
 };
@@ -73,42 +73,72 @@ const nextProject = () => {
 <template>
   <div class="w-full py-24">
     <div class="max-w-6xl mx-auto px-8">
-      <!-- Project -->
-      <div>
-        <div class="flex items-center justify-between mb-2">
-          <!-- Details -->
-          <div>
-            <a :href="projects[focusedProject].href" target="_blank">
-              <h3 class="text-4xl font-extrabold text-red-500">
-                {{ projects[focusedProject].title }}
-              </h3>
-            </a>
-            <p class="text-lg text-gray-300">
-              {{ projects[focusedProject].slogan }}
-            </p>
-          </div>
+      <div class="flex flex-col-reverse md:flex-col gap-2">
+        <!-- Project -->
+        <div class="min-h-fit md:min-h-[500px]">
+          <transition name="fade" mode="out-in">
+            <div :key="focusedProject" class="flex items-center justify-between mb-2">
+              <!-- Details -->
+              <div class="max-w-[285px] md:max-w-full">
+                <a :href="projects[focusedProject].href" target="_blank">
+                  <h3 class="text-4xl font-extrabold text-red-500">
+                    {{ projects[focusedProject].title }}
+                  </h3>
+                </a>
+                <p class="text-lg text-gray-300">
+                  {{ projects[focusedProject].slogan }}
+                </p>
+              </div>
 
-          <a :href="projects[focusedProject].href" target="_blank">
-            <GitHubIcon />
-          </a>
+              <a :href="projects[focusedProject].github" target="_blank">
+                <GitHubIcon />
+              </a>
+            </div>
+          </transition>
+
+          <!-- Technology -->
+          <transition name="fade" mode="out-in">
+            <p :key="focusedProject" class="text-gray-400 mb-6">
+              {{ projects[focusedProject].tech }}
+            </p>
+          </transition>
+
+          <!-- Description -->
+          <transition name="fade" mode="out-in">
+            <div :key="focusedProject" class="space-y-6">
+              <p
+                v-for="(paragraph, index) in projects[focusedProject].description"
+                :key="index"
+                class="text-gray-100"
+              >
+                {{ paragraph }}
+              </p>
+            </div>
+          </transition>
         </div>
 
-        <!-- Technology -->
-        <p class="text-gray-400 mb-6">
-          {{ projects[focusedProject].tech }}
-        </p>
-
-        <!-- Description -->
-        <div class="space-y-6">
-          <p
-            v-for="(paragraph, index) in projects[focusedProject].description"
+        <!-- Project Dot Switcher -->
+        <div class="flex justify-center">
+          <div
+            v-for="(project, index) in projects"
             :key="index"
-            class="text-gray-100"
-          >
-            {{ paragraph }}
-          </p>
+            @click="focusedProject = index"
+            :class="{
+          'w-4 h-4 bg-red-500 rounded-full mx-2 cursor-pointer': focusedProject === index,
+          'w-4 h-4 bg-gray-500 rounded-full mx-2 cursor-pointer': focusedProject !== index
+        }"
+          />
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.25s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0;
+}
+</style>
